@@ -48,6 +48,23 @@ public class Kolekcje {
         list2.addAll(map.keySet());
         list2.addAll(map.values());
         System.out.println(list2);
+        
+        HashMap<Integer,HashMap<Integer,Integer>> m = new HashMap();
+        m.put(200, map2);
+        m.put(300, map);
+        m.put(400, map2);
+        System.out.println(m);
+        list.clear();
+        
+        for(Integer key : m.keySet())
+        {
+            list.add(key);
+            HashMap<Integer,Integer> mm =m.get(key);
+            list.addAll(mm.keySet());
+            list.addAll(mm.values());
+        }
+        System.out.println(list);
+        
     }
     
 }
